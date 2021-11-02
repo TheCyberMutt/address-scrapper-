@@ -15,6 +15,8 @@ The lists "address","phone_number" and "zipcode" start as empty sets.
 
 The function get_the_address() takes parameter "url" from "url_store_list.txt", parsers the data and appends it to lists "address", "phone_number" and "zipcode" with related information. 
 
+You can use this on companies that have multiple stores and dedicate a webpage for each store. 
+
 
 
 
