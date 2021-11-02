@@ -18,8 +18,6 @@ def get_the_address(url):
 
     soup = BeautifulSoup(results.text, "html.parser")
 
-    # print(soup.prettify())
-
     location = soup.find('div', class_='Core-address')
     number = soup.find('div', class_='Core-phone')
 
@@ -27,12 +25,14 @@ def get_the_address(url):
     num = BeautifulSoup(phone.text, "html.parser")
     phone_number.append(num)
 
-    street = location.find('span', class_="c-address-street-1")
     postal = location.find('span', class_="c-address-postal-code")
     postalcode = BeautifulSoup(postal.text, 'html.parser')
+    zipcode.append(postalcode)
+    
+    street = location.find('span', class_="c-address-street-1")
     street_address = BeautifulSoup(street.text, "html.parser")
     address.append(street_address)
-    zipcode.append(postalcode)
+    
 
 get_the_address(example_url)
 
