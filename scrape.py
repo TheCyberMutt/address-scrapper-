@@ -1,8 +1,10 @@
 import requests
 from requests import get
 from bs4 import BeautifulSoup
-import pandas as pd
-import numpy as np
+
+# Usefule if you run loop on URL list to keep data organized
+# import pandas as pd 
+# import numpy as np
 
 example_url = "https://stores.footlocker.com/us/mt/billings/300-south-24th-st-w.html"
 
@@ -34,7 +36,7 @@ def get_the_address(url):
 
 get_the_address(example_url)
 
-
+# Use these to test that you have the correct tags 
 # print(phone_number)
 # print(zipcode)
 # print(address)
